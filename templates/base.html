@@ -20,10 +20,12 @@
 <div class="top bottom">
     <div class="row p-4 bg-dark text-white" >
         <div class="col btn btn-dark text-center {{active if page=='HOME'}}">HOME</div>
-        <div class="col btn btn-dark text-center">ABOUT</div>
-        <div class="col btn btn-dark text-center">MENU</div>
-        <div class="col btn btn-dark text-center">WHERE</div>
+        <div class="col btn btn-dark text-center {{active if page=='ABOUT'}}">ABOUT</div>
+        <div class="col btn btn-dark text-center {{active if page=='MENU'}}">MENU</div>
+        <div class="col btn btn-dark text-center {{active if page=='WHERE'}}">WHERE</div>
     </div>
+    {% block contant %} {% endblock %}
+
 </div>
     
 </body>
