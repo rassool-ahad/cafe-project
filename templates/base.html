@@ -24,12 +24,12 @@
 
 </head>
 <body>
-<div class="top bottom">
+<div class="top bottom position-fixed" style="top: 0;right: 0;left: 0;">
     <div class="row p-4 bg-dark text-white">
-        <div class="col btn btn-dark text-center {{ 'active' if page=='HOME' else '' }}">HOME</div>
-        <div class="col btn btn-dark text-center {{ 'active' if page=='ABOUT' else '' }}">ABOUT</div>
-        <div class="col btn btn-dark text-center {{ 'active' if page=='MENU' else '' }}">MENU</div>
-        <div class="col btn btn-dark text-center {{ 'active' if page=='WHERE' else '' }}">WHERE</div>
+        <a href="{{ url_for('index') }}" class="col btn btn-dark text-center {{ 'active' if page=='HOME' else '' }}">HOME</a>
+        <a href="{{ url_for('about') }}" class="col btn btn-dark text-center {{ 'active' if page=='ABOUT' else '' }}">ABOUT</a>
+        <a href="{{ url_for('menu') }}" class="col btn btn-dark text-center {{ 'active' if page=='MENU' else '' }}">MENU</a>
+        <a href="{{ url_for('where') }}" class="col btn btn-dark text-center {{ 'active' if page=='WHERE' else '' }}">WHERE</a>
     </div>
     {% block content %}
     {% endblock %}
