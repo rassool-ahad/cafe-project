@@ -12,21 +12,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
     <style>
         * {
-            font-family: Inconsolata,sans-serif !important;
+            font-family: Inconsolata, sans-serif !important;
+        }
+        header {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://www.w3schools.com/w3images/coffeehouse.jpg');
+            min-height: 75%;
         }
     </style>
+
 </head>
 <body>
 <div class="top bottom">
-    <div class="row p-4 bg-dark text-white" >
-        <div class="col btn btn-dark text-center {{active if page=='HOME'}}">HOME</div>
-        <div class="col btn btn-dark text-center {{active if page=='ABOUT'}}">ABOUT</div>
-        <div class="col btn btn-dark text-center {{active if page=='MENU'}}">MENU</div>
-        <div class="col btn btn-dark text-center {{active if page=='WHERE'}}">WHERE</div>
+    <div class="row p-4 bg-dark text-white">
+        <div class="col btn btn-dark text-center {{ 'active' if page=='HOME' else '' }}">HOME</div>
+        <div class="col btn btn-dark text-center {{ 'active' if page=='ABOUT' else '' }}">ABOUT</div>
+        <div class="col btn btn-dark text-center {{ 'active' if page=='MENU' else '' }}">MENU</div>
+        <div class="col btn btn-dark text-center {{ 'active' if page=='WHERE' else '' }}">WHERE</div>
     </div>
-    {% block contant %} {% endblock %}
+    {% block content %}
+    {% endblock %}
 
 </div>
-    
+
 </body>
 </html>

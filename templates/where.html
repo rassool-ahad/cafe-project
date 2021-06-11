@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container w-50 py-5">
+        <div class="row pb-5">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <p class="text-center bg-dark text-white"><strong>WHERE TO FIND US</strong></p>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <p>Find us at some address at some place.</p>
+        <img class="w-100" src="https://www.w3schools.com/w3images/map.jpg" alt="My Cafe"><br><br>
+        <P><span class="bg-dark text-white">FYI!</span> We offer full-service catering for any event,
+            large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them
+            all,
+            both look and taste.<br><br><b>Reserve</b> a table, ask for today's special or just send us a message:</P>
+        <form action="#">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" id="name">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="How many People" id="how">
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" class="form-control" value="2000-11-25T10:20" id="date">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Message \ Special requirements" id="message">
+            </div>
+            <button type="submit" class="btn btn-dark">SEND MESSAGE</button>
+        </form>
+    </div>
+{% endblock %}

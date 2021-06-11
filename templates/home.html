@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <header class="position-relative">
+        <div class="text-center"><span class="text-white" style="font-size:90px">the<br>Cafe</span></div>
+        <div class="padding-large d-none d-sm-block bg-dark position-absolute"
+             style="left: 10px; bottom: 5px; padding: 2px 10px"><span class="text-white tag">Open From 6am to 8pm</span>
+        </div>
+        <div class="position-absolute" style="bottom: 5px;right: 10px"><span
+                class="text-white">15 Adr street, 5015</span></div>
+    </header>
+    <iframe src="./home_files/widget.html"
+            style="overflow: hidden; position: fixed; height: 155px; width: 400px; bottom: 20px; right: 20px; background: none; border: none; z-index: 2147483646; visibility: hidden; user-select: none;"></iframe>
+{% endblock %}
